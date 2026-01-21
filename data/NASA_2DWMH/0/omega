@@ -1,69 +1,55 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2.3.0                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       volScalarField;
-    location    "0";
     object      omega;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform  0.11022703842524302;
+#include "../caseDef"
+#include "inletOutletFields/omega_inlet"
+
+internalField   uniform $omegaRef;
 
 boundaryField
 {
-    bottomWall
+    inlet
     {
-        type            omegaWallFunction;            	//fixedValue;
-        value           uniform 0.11022703842524302;  	//1363.5898645205286;
+        type            fixedValue;
+        value           $omega_inlet;
     }
-    topWall
-    {
-        type            omegaWallFunction;		//fixedValue;
-        value           uniform 0.11022703842524302;    //1363.5898645205286;
-    }
-    inlet_half0
-    {
-        type            cyclic;
-    }
-    inlet_half1
-    {
-        type            cyclic;
-    }
-    outlet_half0
-    {
-        type            cyclic;
-    }
-    outlet_half1
-    {
-        type            cyclic;
-    }
-    sideRight_half0
-    {
-        type            empty;
-    }
-    sideRight_half1
-    {
-        type            empty;
-    }
-    sideLeft_half0
-    {
-        type            empty;
-    }
-    sideLeft_half1
-    {
-        type            empty;
-    }
-}
 
+    bottom
+    {
+        type            omegaWallFunction;
+        value           uniform 1e10;
+    }
+    
+    outlet
+    {
+        type            zeroGradient;
+    }
+    
+    sides
+    {
+        type            empty;
+    }
+    
+    top
+    {
+        type            symmetry;
+    }
+
+}
 
 // ************************************************************************* //

@@ -1,76 +1,54 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  2.3.0                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
     version     2.0;
     format      ascii;
     class       volScalarField;
-    location    "0";
     object      nut;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
 dimensions      [0 2 -1 0 0 0 0];
 
-internalField   uniform 0;
+#include "../caseDef"
+
+internalField   uniform $nut;
 
 boundaryField
 {
 
-    bottomWall
+    inlet
     {
-        type            nutLowReWallFunction;
-        value           uniform 0;
-    }
-    topWall
-    {
-        type            nutLowReWallFunction;
-        value           uniform 0;
+        type            calculated;
+        value           uniform $nut;
     }
 
-    inlet_half0
+    bottom
     {
-        type            cyclic;
+        type            nutUSpaldingWallFunction;
+        value           uniform $nut;
     }
-
-    inlet_half1
+    
+    outlet
     {
-        type            cyclic;
+        type            calculated;
+        value           uniform $nut;
     }
-
-    outlet_half0
-    {
-        type            cyclic;
-    }
-
-    outlet_half1
-    {
-        type            cyclic;
-    }
-
-    sideRight_half0
+    
+    sides
     {
         type            empty;
     }
-
-    sideRight_half1
+    
+    top
     {
-        type            empty;
-    }
-
-    sideLeft_half0
-    {
-        type            empty;
-    }
-
-    sideLeft_half1
-    {
-        type            empty;
+        type            symmetry;
     }
 
 }

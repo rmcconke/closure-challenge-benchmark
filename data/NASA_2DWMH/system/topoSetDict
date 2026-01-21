@@ -33,7 +33,7 @@ actions
         source patchToFace;
         sourceInfo
         {
-          name bottomWall;
+          name bottom;
         }
      }
 );

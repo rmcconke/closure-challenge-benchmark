@@ -1,14 +1,25 @@
-/*--------------------------------*- C++ -*----------------------------------*\
-  =========                 |
-  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
-   \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  7
-     \\/     M anipulation  |
--------------------------------------------------------------------------------
-Description : Definition of probe locations for monitoring flow variables.
-\*---------------------------------------------------------------------------*/
-
+#include "../caseDef"
 #include "../fieldDef"
+
+//y-coordinate in the middle of the domain
+yMid #calc "-0.5*$c";
+
+//Start of hump
+xHumpStart #calc "0.0335*$c";
+zHumpStart #calc "0.0263*$c";
+
+//High speed region above hump
+xHighSpeed #calc "0.524*$c";
+zHighSpeed #calc "0.178*$c";
+
+//Detachment region
+xDetach #calc "0.671*$c";
+zDetach #calc "0.111*$c";
+
+//Reattachment region
+xReattach #calc "1.25*$c";
+zReattach #calc "0.00281*$c";
+
 
 convergenceProbes
 {
@@ -29,8 +40,9 @@ convergenceProbes
 
     probeLocations
     (
-        (1e-6 1 0) //High speed region above hill crest
-        (1 0.5 0) //Detachment region
-        (4.65 0.1 0) //Reattachment region
+        ($xHumpStart $yMid $zHumpStart) //Start of hump
+        ($xHighSpeed $yMid $zHighSpeed) //High speed region above hump
+        ($xDetach $yMid $zDetach) //Detachment region
+        ($xReattach $yMid $zReattach) //Reattachment region
     );
 }

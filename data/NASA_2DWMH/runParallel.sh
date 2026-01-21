@@ -5,7 +5,7 @@ set -e
 
 decomposePar > log.decomposePar
 
-mpirun -np 8 modelPropagationFoam -parallel > log.run
+mpirun -np 4 modelPropagationFoam -parallel > log.run
 
 reconstructPar > log.reconstructPar
 

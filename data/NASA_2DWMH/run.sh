@@ -3,6 +3,6 @@
 # Exit when a line throws an error
 set -e
 
-simpleFoam > log.run
+modelPropagationFoam > log.run
 
 ./postProcess.sh

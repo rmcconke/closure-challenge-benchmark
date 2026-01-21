@@ -1,0 +1,44 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Writes graph data for specified fields along a line, specified by start
+    and end points.
+
+\*---------------------------------------------------------------------------*/
+
+#include "../caseDef"
+#include "../fieldDef"
+
+//y-coordinate in the middle of the domain
+yMid #calc "-0.5*$c";
+
+//x-coordinate of the singleGraph
+xSG #calc "1.2*$c";
+
+start   ($xSG $yMid 0);
+end     ($xSG $yMid $c);
+fields  $singleGraphFields;
+
+// Sampling and I/O settings
+#includeEtc "caseDicts/postProcessing/graphs/sampleDict.cfg"
+
+// Override settings here, e.g.
+
+interpolationScheme cellPoint;
+
+setConfig
+{
+    type lineCell;
+    axis xyz;        // y, z, xyz
+}
+
+
+// Must be last entry
+#includeEtc "caseDicts/postProcessing/graphs/graph.cfg"
+
+// ************************************************************************* //

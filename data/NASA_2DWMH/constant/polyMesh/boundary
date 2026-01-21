@@ -15,89 +15,40 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-10
+5
 (
-    bottomWall
+    inlet
+    {
+        type            patch;
+        nFaces          83;
+        startFace       102547;
+    }
+    bottom
     {
         type            wall;
         inGroups        List<word> 1(wall);
-        nFaces          120;
-        startFace       30950;
+        nFaces          622;
+        startFace       102630;
     }
-    topWall
-    {
-        type            wall;
-        inGroups        List<word> 1(wall);
-        nFaces          120;
-        startFace       31070;
-    }
-    inlet_half0
-    {
-        type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          65;
-        startFace       31190;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  outlet_half0;
-    }
-    inlet_half1
-    {
-        type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          65;
-        startFace       31255;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  outlet_half1;
-    }
-    outlet_half0
-    {
-        type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          65;
-        startFace       31320;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  inlet_half0;
-    }
-    outlet_half1
-    {
-        type            cyclic;
-        inGroups        List<word> 1(cyclic);
-        nFaces          65;
-        startFace       31385;
-        matchTolerance  0.0001;
-        transform       unknown;
-        neighbourPatch  inlet_half1;
-    }
-    sideRight_half0
+    sides
     {
         type            empty;
         inGroups        List<word> 1(empty);
-        nFaces          7800;
-        startFace       31450;
+        nFaces          103252;
+        startFace       103252;
     }
-    sideRight_half1
+    outlet
     {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          7800;
-        startFace       39250;
+        type            patch;
+        nFaces          83;
+        startFace       206504;
     }
-    sideLeft_half0
+    top
     {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          7800;
-        startFace       47050;
-    }
-    sideLeft_half1
-    {
-        type            empty;
-        inGroups        List<word> 1(empty);
-        nFaces          7800;
-        startFace       54850;
+        type            symmetry;
+        inGroups        List<word> 1(symmetry);
+        nFaces          622;
+        startFace       206587;
     }
 )
 

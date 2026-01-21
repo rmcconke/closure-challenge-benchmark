@@ -1,14 +1,17 @@
 #!/bin/bash
 
-# Delete all numeric directories except '0', e.g. '1000', '2000', etc.
-ls -d [1-9][0-9]* | xargs rm -rf
+# Exit when a line throws an error
+set -e
+
+# Remove the time directories (except 0)
+rm -rf 0.* 1* 2* 3* 4* 5* 6* 7* 8* 9*
+
 
 # Delete post-processing output
 rm -rf postProcessing
-rm -f profile.pdf
+
+# Remove processor directories
+rm -rf processor*
 
 # Delete logs
 rm -f log.* *~
-
-# 
-rm -rf processor*

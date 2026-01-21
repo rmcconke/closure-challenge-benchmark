@@ -1,0 +1,25 @@
+//Environment variables
+Tref                298.3333333333; //Reference temperature
+R                   287.05; //Specific gas constant (dry air)
+gamma               1.4; //Heat capacity ratio
+I                   0.00077; //Turbulence intensity
+
+
+//Case variables
+Mref                0.1; //Reference Mach number
+Re_c                936000; //Chord based Reynolds number
+c                   0.42; //Hump chord length
+nut                 0.009; //Eddy kinematic viscosity
+Pt_pref             1.007; //Ratio between inlet total pressure and reference pressure
+pout_pref           0.99962; //Ratio between outlet static pressure and reference pressure
+
+
+//Calculated variables
+aref                #calc "pow(($gamma * $R * $Tref), 0.5)"; //Reference speed of sound
+Uinf                #calc "$Mref*$aref"; //Freestream velocity
+nu                  #calc "$Uinf*$c/$Re_c"; //Laminar kinematic viscosity from Reynolds number
+pref_rho            #calc "$R*$Tref"; //Reference pressure over density from perfect gas law
+deltaPtInlet_rho    #calc "($Pt_pref-1.)*$pref_rho"; //Pt at the inlet for incompressible flow with pref=0
+deltapOutlet_rho    #calc "($pout_pref - 1.)*$pref_rho"; //Pressure at the outlet for incompressible flow with pref=0
+kRef                #calc "1.5*pow(($Uinf * $I), 2)"; //Reference turbulent kinetic energy
+omegaRef            #calc "$kRef/$nut"; //Reference omega (at the inlet if U=Uref)

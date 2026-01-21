@@ -1,9 +1,9 @@
 /*--------------------------------*- C++ -*----------------------------------*\
-| =========                 |                                                 |
-| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  1.7.0                                 |
-|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
-|    \\/     M anipulation  |                                                 |
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
 {
@@ -19,44 +19,44 @@ libs ( "libfrozenIncompressibleTurbulenceModels.so" );
 
 startFrom       latestTime;
 
-startTime       0;
+stopAt          endTime;
 
-stopAt          endTime;//writeNow
-
-endTime         10000;
+endTime         2000;
 
 deltaT          1;
 
 writeControl    timeStep;
 
-writeInterval   10000;
+writeInterval   $endTime;
 
 purgeWrite      0;
 
 writeFormat     ascii;
 
-writePrecision  15;
+writePrecision  6;
 
-writeCompression uncompressed;
+writeCompression off;
 
 timeFormat      general;
 
-timePrecision   15;
+timePrecision   6;
 
-runTimeModifiable yes;//true;
+runTimeModifiable true;
 
 functions
 {
-  #includeFunc  residuals
-  #includeFunc  singleGraph_x0
-  #includeFunc  singleGraph_x1
-  #includeFunc  singleGraph_x2
-  #includeFunc  singleGraph_x3
-  #includeFunc  singleGraph_x4
-  #includeFunc  singleGraph_x5
-  #includeFunc  singleGraph_x6
-  #includeFunc  singleGraph_x7
-  #includeFunc  singleGraph_x8
-  #includeFunc convergenceProbes
+    #includeFunc residuals
+    #includeFunc wallValues
+    #includeFunc convergenceProbes
+    #includeFunc singleGraph_x0.8c
+    #includeFunc singleGraph_x0.9c
+    #includeFunc singleGraph_x0.65c
+    #includeFunc singleGraph_x1.0c
+    #includeFunc singleGraph_x1.1c
+    #includeFunc singleGraph_x1.2c
+    #includeFunc singleGraph_x1.3c
+    
 }
+
+
 // ************************************************************************* //
