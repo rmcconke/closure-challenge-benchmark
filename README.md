@@ -11,6 +11,7 @@
 Notes:
 - Score is a scaled MAE (lower is better). See the evaluation package [source code](https://github.com/rmcconke/closure-challenge/blob/main/src/closure_challenge/eval.py) for more details.
 - Submissions are accepted anytime! See below for submission instructions.
+- We now have an [arXiv preprint](https://arxiv.org/abs/2603.28884) for the challenge. However, this page is the main source of up-to-date information.
 
 # Motivation
 The field of ML augmented RANS modelling has seen significant interest for at least a decade. Many methodologies have been proposed. However, a critical problem slowing progress in the field is the absence of an open-source benchmark dataset with clear evaluation criteria. In order to compare a new technique against an existing technique, significant effort is required. We aim to eliminate this required effort and greatly accelerate progress in the field by implementing a benchmark dataset for ML in RANS.
@@ -20,6 +21,8 @@ Our goal is to create a challenging dataset that represents the actual state of 
 The benchmark task is to **predict the flow field** for a series of test cases given a specified training and validation dataset, as well as a given CFD mesh. All other decisions are left to the submitter.
 
 This is an **ongoing** challenge. It is not associated with any particular conference or event. This running leaderboard aims to summarize the state of the art in the field of ML for RANS turbulence modelling.
+
+
 
 If you have questions or suggestions as this challenge is developed, please open an issue in this repo. This is a community effort!
 
@@ -87,7 +90,7 @@ The train/val/test split in the challenge tests the following:
 - Geometry generalization
 
 # Submission instructions
-The submission procedure is currently a work in progress. However, the scoring code is available here: [closure-challenge](https://github.com/rmcconke/closure-challenge).
+The scoring code is available here: [closure-challenge](https://github.com/rmcconke/closure-challenge).
 
 You must submit your predictions on the test dataset in **CSV format**.
 
@@ -97,6 +100,17 @@ You must submit your predictions on the test dataset in **CSV format**.
 4. The benchmark steward (currently, Ryley McConkey) will evaluate your predictions, and update the leaderboard accordingly.
 
 
-
+# Citation
+If you use the data or benchmark in your work, please cite the [arXiv preprint](https://arxiv.org/abs/2603.28884):
+```
+@article{closurechallenge,
+  title={The Closure Challenge: a benchmark task for machine learning in turbulence modelling},
+  author={McConkey, Ryley and Buchanan, Tyler and Smidt, Tess and Bodner, Abigail and Dwight, Richard and Cinnella, Paola},
+  eprint={2603.28884},
+  archivePrefix={arXiv},
+  year={2026},
+  doi={10.48550/arXiv.2603.28884}
+}
+```
 
 
