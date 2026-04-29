@@ -1,0 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.7.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+libs ( "libfrozenIncompressibleTurbulenceModels.so" );
+
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         10000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   10000;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  15;
+
+writeCompression uncompressed;
+
+timeFormat      general;
+
+timePrecision   15;
+
+runTimeModifiable yes;
+
+
+functions
+{
+  #includeFunc  residuals
+  #includeFunc  convergenceProbes
+  wallShearStress
+  {
+    type            wallShearStress;
+    libs            ("libfieldFunctionObjects.so");
+    log             true;
+    writeControl    writeTime;
+    patches         (bottomWall);
+  }
+  #includeFunc  bottomValues
+  #includeFunc  singleGraph_x0
+  #includeFunc  singleGraph_x1
+  #includeFunc  singleGraph_x2
+  #includeFunc  singleGraph_x3
+  #includeFunc  singleGraph_x4
+  #includeFunc  singleGraph_x5
+  #includeFunc  singleGraph_x6
+  #includeFunc  singleGraph_x7
+  #includeFunc  singleGraph_x8
+  
+  
+}
+// ************************************************************************* //

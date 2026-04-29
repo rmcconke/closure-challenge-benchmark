@@ -1,0 +1,127 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         0.25;
+
+deltaT          1e-4;
+
+writeControl    adjustableRunTime;
+
+writeInterval   0.05;
+
+purgeWrite      2;
+
+writeFormat     ascii;
+
+writePrecision   8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   6;
+
+runTimeModifiable true;
+
+functions
+{
+    #includeFunc MachNo
+    #includeFunc convergenceProbes
+    #includeFunc computeTotalPressure
+    
+    #includeFunc singleGraph_x2D
+    #includeFunc singleGraph_x5D
+    #includeFunc singleGraph_x10D
+    #includeFunc singleGraph_x15D
+    #includeFunc singleGraph_x20D
+    #includeFunc singleGraph_y0D
+
+    fieldAverage1
+    {
+        type            fieldAverage;
+        libs            ("libfieldFunctionObjects.so");
+        writeControl    writeTime; 
+        timeStart       0.2;
+
+        fields
+        (
+            alphat
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            nut
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+            
+            omega
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            k
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            p
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+            
+            Pt
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+
+            T
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+            
+            U
+            {
+                mean        on;
+                prime2Mean  off;
+                base        time;
+            }
+        );
+    }
+    
+}
+
+// ************************************************************************* //

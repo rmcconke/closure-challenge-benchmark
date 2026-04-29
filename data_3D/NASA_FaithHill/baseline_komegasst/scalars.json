@@ -1,0 +1,59 @@
+{
+  "case": "NASA Faith Hill \u2014 3D smooth-body separation",
+  "reference_conditions": {
+    "U_ref_m_s": 50.3,
+    "h_hill_m": 0.1524,
+    "h_hill_in": 6.0,
+    "Re_h": 500000,
+    "M_inf": 0.143,
+    "OF_units": "non-dimensional (U_inlet=1, L_ref=h_hill)"
+  },
+  "baseline_komegasst": {
+    "solver": "simpleFoam",
+    "turbulence_model": "kOmegaSST",
+    "converged_at_t": 2000,
+    "hill_surface_cells_half": 10120,
+    "hill_wetted_area_half_nondim": 160.77564711968347,
+    "CD_pressure_half_domain": 0.234325437846345,
+    "CL_pressure_half_domain": 0.3318041892513321,
+    "CD_friction_half_domain": 0.015493905602011046,
+    "CL_friction_half_domain": 0.00044899423458173525,
+    "CD_total_half_domain": 0.24981934344835605,
+    "CL_total_half_domain": 0.3322531834859138,
+    "CD_friction_share_pct": 6.202044000333395,
+    "A_frontal_half_nondim": 0.75,
+    "A_planform_half_nondim": 3.5342917352885173,
+    "p_ref_inlet_mean": 0.04495200142264366,
+    "Cp_min_PSP": -1.082564,
+    "Cp_max_PSP": 0.61241764
+  },
+  "experiment_NASA_Ames": {
+    "sources": [
+      "Bell et al. 2012 AIAA-2012-0704 (PIV + PSP)",
+      "Husen et al. 2014 AIAA-2014-1237 (FISF Cf)"
+    ],
+    "PSP_n_taps": 808,
+    "PSP_x_in_range": [
+      -9.0,
+      9.0
+    ],
+    "FISF_n_points": 2518,
+    "PIV_files": [
+      "PIV_centerline_2Hz_4000samps.csv",
+      "PIV_centerline_1kHz_3940samp.csv"
+    ],
+    "Cobra_data_excluded": true,
+    "Cobra_exclusion_reason": "40-deg acceptance cone fails inside reverse-flow region"
+  },
+  "metric_files": {
+    "PIV_centerline_primary": "baseline_komegasst/PIV_centerline_2Hz_4000samps.csv",
+    "PSP_centerline": "baseline_komegasst/PSP_centerline_p150.csv",
+    "FISF_surface_Cf": "baseline_komegasst/FISF_FAITH_surface.csv"
+  },
+  "extraction_notes": {
+    "CD_normalization": "Fx_half / (0.5 * U_inlet^2 * A_frontal_half) \u2014 half-domain consistent",
+    "CL_normalization": "Fy_half / (0.5 * U_inlet^2 * A_planform_half)",
+    "A_frontal_full_nondim": 1.5,
+    "CD_friction_requires": "wallShearStress function object (~10 min re-run)"
+  }
+}

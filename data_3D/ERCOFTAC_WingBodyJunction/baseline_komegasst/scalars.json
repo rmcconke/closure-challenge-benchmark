@@ -1,0 +1,64 @@
+{
+  "case": "ERCOFTAC Wing-Body Junction (DNS 1-6)",
+  "reference_conditions": {
+    "U_ref_m_s": 27.0,
+    "T_airfoil_m": 0.0717,
+    "Re_T": 115000,
+    "M_inf": 0.078,
+    "wing_chord_m": 0.3050095736980438,
+    "wing_span_m": 0.2151000052690506
+  },
+  "baseline_komegasst": {
+    "solver": "simpleFoam",
+    "turbulence_model": "kOmegaSST",
+    "converged_at_t": 5000,
+    "airfoil_surface_cells": 55025,
+    "airfoil_wetted_area_m2": 0.13997885827400355,
+    "CD_pressure_T2": 0.14022974920315415,
+    "CD_pressure_frontal": 0.046743248589370574,
+    "CL_pressure_T2": 0.0,
+    "C_side_pressure_T2": 0.0004308832749126915,
+    "CD_friction_T2": 0.12848558231028606,
+    "CD_friction_frontal": 0.0428285263876422,
+    "CL_friction_T2": 0.0006172278355143819,
+    "CD_total_T2": 0.2687153315134402,
+    "CD_total_frontal": 0.08957177497701277,
+    "CD_friction_share_pct": 47.814756823378225,
+    "p_ref_inlet_mean": 0.0,
+    "inlet_U_mean": 24.88981056213379,
+    "Cp_bw_min": -0.0040123910733865,
+    "Cp_bw_max": 0.9732313535504544,
+    "Cp_wing_root_min": -1.0951545621141976,
+    "Cp_wing_root_max": 0.8747616363650977
+  },
+  "reference_DNS": {
+    "source": "ERCOFTAC kbwiki DNS 1-6 (Bassi/Colombo/Massa/Leschziner/Chapelier)",
+    "code": "MIGALE high-order DG",
+    "n_midplane_profile_stations": 10,
+    "n_bottom_wall_points": 42642,
+    "n_wing_root_points": 53248,
+    "incoming_BL_thickness_delta99_per_T_at_xT_-2.15": 0.25,
+    "note": "DNS uses HALF the experimental BL thickness \u2014 direct exp comparison not intended"
+  },
+  "metric_files": {
+    "midplane_profiles": [
+      "baseline_komegasst/profile_midplane_-0.01.csv",
+      "baseline_komegasst/profile_midplane_-0.05.csv",
+      "baseline_komegasst/profile_midplane_-0.10.csv",
+      "baseline_komegasst/profile_midplane_-0.15.csv",
+      "baseline_komegasst/profile_midplane_-0.20.csv",
+      "baseline_komegasst/profile_midplane_-0.25.csv",
+      "baseline_komegasst/profile_midplane_-0.30.csv",
+      "baseline_komegasst/profile_midplane_-0.35.csv",
+      "baseline_komegasst/profile_midplane_-0.40.csv",
+      "baseline_komegasst/profile_midplane_-0.45.csv"
+    ],
+    "bottom_wall_centerline": "baseline_komegasst/bottom_wall_centerline.csv",
+    "wing_root_chord": "baseline_komegasst/wing_root_chord.csv"
+  },
+  "extraction_notes": {
+    "CD_normalization": "Fx / (0.5 * U_ref^2 * A) for both T^2 and T*span ref areas",
+    "p_ref_subtraction": "subtracted inlet mean p before integration (non-closed surface)",
+    "CD_friction_requires": "wallShearStress function object (~10 min re-run)"
+  }
+}

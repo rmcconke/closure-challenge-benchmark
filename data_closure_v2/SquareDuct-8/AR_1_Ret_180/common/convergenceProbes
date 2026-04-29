@@ -1,0 +1,34 @@
+convergenceProbes
+{
+    #include "./caseDef"
+    #include "./fieldDef"
+    h_01    #calc "$h*0.1";
+    h_05    #calc "$h*0.5";
+    h_09    #calc "$h*0.9";
+    ARh_01  #calc "$h_01*$AR";
+    ARh_05  #calc "$h_05*$AR";
+    ARh_09  #calc "$h_09*$AR"; 
+    // Where to load it from
+    libs            ("libsampling.so");
+
+    type            probes;
+
+    // Name of the directory for probe data
+    name            convergenceProbes;
+
+    // Write at same frequency as fields
+    writeControl    timeStep;
+    writeInterval   1;
+
+    // Fields to be probed
+    fields          $convergenceFields;
+
+    probeLocations
+    (
+        ($h_05 $h_01 $ARh_01) //bottom left
+        ($h_05 $h_01 $ARh_09) //bottom right
+        ($h_05 $h_09 $ARh_09) //top right
+        ($h_05 $h_09 $ARh_01) //top left
+        ($h_05 $h_05 $ARh_05) //middle
+    );
+}

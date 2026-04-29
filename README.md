@@ -42,16 +42,63 @@ Original data link: [https://turbmodels.larc.nasa.gov/Other_LES_Data/curvedstep.
 Original data link: [https://turbmodels.larc.nasa.gov/nasahump_val.html](https://turbmodels.larc.nasa.gov/nasahump_val.html)
 
 ## 3D Cases
-All 3D case baseline meshes and RANS solutions can be accessed here:  
+Lightweight comparison data (probe-line CSVs, profiles, surface integrals, plot
+scripts) for the 3D cases lives in [`data_3D/`](data_3D/). Heavy raw simulation data
+— OpenFOAM time directories, VTK volume dumps, `polyMesh/`, `postProcessing/`,
+WBJ's 1.1 GB DNS surface dumps — lives on the SURF drive:
 **[https://surfdrive.surf.nl/s/G5ND38JxRXbWBJQ](https://surfdrive.surf.nl/s/G5ND38JxRXbWBJQ)**
+
 ### Square and rectangular duct
 Original data link: [https://www.vinuesalab.com/duct/](https://www.vinuesalab.com/duct/)
-### Wing-body junction flow (Re = 115k)
+### Wing-body junction flow (Re = 115k) — [`data_3D/ERCOFTAC_WingBodyJunction/`](data_3D/ERCOFTAC_WingBodyJunction/)
 Original data link: [https://www.ercoftac.org/](https://www.kbwiki.ercoftac.org/w/index.php/DNS_1-6) (ERCOFTAC DNS 1-6)
-### Ahmed Body automotive wake (Re = 760k)
+### Ahmed Body automotive wake (Re = 760k) — [`data_3D/ERCOFTAC_AhmedBody25/`](data_3D/ERCOFTAC_AhmedBody25/)
 Original data link: [https://www.ercoftac.org/](http://cfd.mace.manchester.ac.uk/ercoftac/doku.php?id=cases:case082) (ERCOFTAC Database)
-### Faith Hill smooth-body separation (Re = 500k)
+### Faith Hill smooth-body separation (Re = 500k) — [`data_3D/NASA_FaithHill/`](data_3D/NASA_FaithHill/)
 Original data link: [https://turbmodels.larc.nasa.gov/faith_val.html](https://turbmodels.larc.nasa.gov/Other_exp_Data/FAITH_hill_exp.html)
+
+### Regenerating 3D plots with your model
+
+Each `data_3D/<case>/plots/plot_profiles.py` accepts a `MODEL_DIR` env var. Drop
+your predictions into a folder that mirrors `<case>/highfidelity/` (same filenames
+and column schema) and run:
+
+```bash
+cd data_3D/NASA_FaithHill/plots
+MODEL_DIR=/path/to/my_results python plot_profiles.py
+```
+
+A "Submitted model" curve is added to every panel. Files the script can't find are
+silently skipped, so partial submissions degrade to empty panels rather than crashes.
+
+## 2D challenge refresh — `data_closure_v2/`
+
+A refreshed version of the 4 active 2D cases with the agreed evaluation metrics
+sits in [`data_closure_v2/`](data_closure_v2/). This is staged separately from the
+existing `data/` (which is wired into the `eval_submissions.py` leaderboard) so it
+can be reviewed and merged deliberately.
+
+| Case | Folder | Agreed metrics |
+|------|--------|----------------|
+| Periodic hills (Re = 5600 + 10595) | `data_closure_v2/Periodic_Hill-8/` | Velocity + shear stress profiles, Cf (bottom + upper wall) |
+| NASA hump | `data_closure_v2/NASA_Hump-8/` | Velocity + shear stress profiles, Cp + Cf (bottom wall) |
+| Square duct | `data_closure_v2/SquareDuct-8/` | Axial velocity profile + transverse velocities |
+| Curved backward-facing step (CBFS) | `data_closure_v2/CBFS-8/` | Velocity + shear stress profiles, Cf (bottom wall) |
+
+Each case folder carries `comparison_<CASE>.py` (the canonical plot script), a
+`Figures/` subdirectory with pre-rendered PDFs and curated metric CSVs, plus
+`00Baseline/` (k-ω SST RANS run), `01Frozen/` (frozen-baseline trace), and
+`RefData/` (DNS / LES / experiment reference). The very large NASA Hump DNS dumps
+(`LES.dat`, `VelocityDerivatives.dat`, `pickledLESData.pickle`, ~435 MB combined)
+are kept on the SURF drive — drop them into `data_closure_v2/NASA_Hump-8/RefData/`
+before running `comparison_NASA.py`.
+
+## Draft 2D extensions — `data_2D_extended_draft/`
+
+Three NASA TMR Collaborative Testing Challenge 2022 cases (NASA_2DZP, NASA_ASJ,
+NASA_2DN00) are staged in [`data_2D_extended_draft/`](data_2D_extended_draft/). The
+final layout — folder naming, evaluation-point grids, integration with the live
+leaderboard — is **TBD**. See the README in that folder for details.
 
 # Challenge rules 
 ## Input features and fields

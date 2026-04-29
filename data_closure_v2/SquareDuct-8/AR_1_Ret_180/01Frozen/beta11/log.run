@@ -1,0 +1,1161 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : frozenSimpleFoam
+Date   : Apr 23 2026
+Time   : 16:10:08
+Host   : "Renzhi-Desktop"
+PID    : 1641994
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Using #calcEntry at line 6 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e305d05308d1ade03f6eb88824101ddb2eba3278.so"
+Creating new library in "dynamicCode/_e305d05308d1ade03f6eb88824101ddb2eba3278/platforms/linux64GccDPInt32Opt/lib/libcodeStream_e305d05308d1ade03f6eb88824101ddb2eba3278.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_e305d05308d1ade03f6eb88824101ddb2eba3278"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_e305d05308d1ade03f6eb88824101ddb2eba3278
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_e305d05308d1ade03f6eb88824101ddb2eba3278/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_e305d05308d1ade03f6eb88824101ddb2eba3278.so
+Using #calcEntry at line 7 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8f3c4192690bcc53a34cf723aeeab9b62f638bd7.so"
+Creating new library in "dynamicCode/_8f3c4192690bcc53a34cf723aeeab9b62f638bd7/platforms/linux64GccDPInt32Opt/lib/libcodeStream_8f3c4192690bcc53a34cf723aeeab9b62f638bd7.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_8f3c4192690bcc53a34cf723aeeab9b62f638bd7"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_8f3c4192690bcc53a34cf723aeeab9b62f638bd7
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_8f3c4192690bcc53a34cf723aeeab9b62f638bd7/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_8f3c4192690bcc53a34cf723aeeab9b62f638bd7.so
+Using #calcEntry at line 8 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59.so"
+Creating new library in "dynamicCode/_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59/platforms/linux64GccDPInt32Opt/lib/libcodeStream_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_a2727cef0b180b3b2f6a19fffe5ff7cc3de40b59.so
+Using #calcEntry at line 9 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_08de2c874f28fd753ed75007aeeceda0c9d51543.so"
+Creating new library in "dynamicCode/_08de2c874f28fd753ed75007aeeceda0c9d51543/platforms/linux64GccDPInt32Opt/lib/libcodeStream_08de2c874f28fd753ed75007aeeceda0c9d51543.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_08de2c874f28fd753ed75007aeeceda0c9d51543"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_08de2c874f28fd753ed75007aeeceda0c9d51543
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_08de2c874f28fd753ed75007aeeceda0c9d51543/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_08de2c874f28fd753ed75007aeeceda0c9d51543.so
+Using #calcEntry at line 10 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39.so"
+Creating new library in "dynamicCode/_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39/platforms/linux64GccDPInt32Opt/lib/libcodeStream_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_113c0be5b9de49cf46d2b5f510dd43edc0e2aa39.so
+Using #calcEntry at line 11 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/convergenceProbes/convergenceProbes"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d.so"
+Creating new library in "dynamicCode/_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d/platforms/linux64GccDPInt32Opt/lib/libcodeStream_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_5fdfd6a3e530880c1cc1e3743cb143548bc9ec5d.so
+Using #calcEntry at line 6 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/system/controlDict/functions/singleGraphDiag/singleGraphDiag"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_7024d18a3a0a58ccf3601934435b580ead49fb4c.so"
+Creating new library in "dynamicCode/_7024d18a3a0a58ccf3601934435b580ead49fb4c/platforms/linux64GccDPInt32Opt/lib/libcodeStream_7024d18a3a0a58ccf3601934435b580ead49fb4c.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_7024d18a3a0a58ccf3601934435b580ead49fb4c"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_7024d18a3a0a58ccf3601934435b580ead49fb4c
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_7024d18a3a0a58ccf3601934435b580ead49fb4c/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_7024d18a3a0a58ccf3601934435b580ead49fb4c.so
+Create mesh for time = 0
+
+
+SIMPLE: Convergence criteria found
+        omega: tolerance 5e-18
+
+Reading field p
+
+Reading field U_LES
+
+Reading field U == U_LES
+
+Using #calcEntry at line 19 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/0/U"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_4be49362e57ada934a2b8a6571b5cb6d2e68c338.so"
+Creating new library in "dynamicCode/_4be49362e57ada934a2b8a6571b5cb6d2e68c338/platforms/linux64GccDPInt32Opt/lib/libcodeStream_4be49362e57ada934a2b8a6571b5cb6d2e68c338.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_4be49362e57ada934a2b8a6571b5cb6d2e68c338"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_4be49362e57ada934a2b8a6571b5cb6d2e68c338
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/01Frozen/beta11/dynamicCode/_4be49362e57ada934a2b8a6571b5cb6d2e68c338/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_4be49362e57ada934a2b8a6571b5cb6d2e68c338.so
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model frozenkOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    RASModel        frozenkOmegaSST;
+    turbulence      yes;
+    printCoeffs     yes;
+    modelRST        false;
+    useRST          1;
+    modelkDeficit   false;
+    usekDeficit     1;
+    omegaMin        1e-05;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555555555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    rampStartTime   0;
+    rampEndTime     1;
+    xi_ramp         1;
+}
+
+bounding k_LES, min: 0 max: 30.9144705030842 average: 7.95026637267798
+No MRF models present
+
+No finite volume options present
+MPI Rank: 0
+
+
+Starting time loop
+
+Reading set description:
+    line
+
+Time = 1
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.5394943119791e-07, Final residual = 9.74310471338273e-21, No Iterations 15
+RPD
+ExecutionTime = 0.15 s  ClockTime = 9 s
+
+Time = 2
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 0.00792284375360473, Final residual = 3.5440654870786e-21, No Iterations 16
+RPD
+ExecutionTime = 0.16 s  ClockTime = 9 s
+
+Time = 3
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 0.00150251637855684, Final residual = 2.38582200747598e-21, No Iterations 16
+RPD
+ExecutionTime = 0.17 s  ClockTime = 9 s
+
+Time = 4
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 0.000476289136611575, Final residual = 5.64333247010887e-22, No Iterations 16
+RPD
+ExecutionTime = 0.17 s  ClockTime = 9 s
+
+Time = 5
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 0.000160535971508917, Final residual = 3.35988159081603e-21, No Iterations 15
+RPD
+ExecutionTime = 0.18 s  ClockTime = 9 s
+
+Time = 6
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.64139183466157e-05, Final residual = 7.96524990581301e-21, No Iterations 14
+RPD
+ExecutionTime = 0.19 s  ClockTime = 9 s
+
+Time = 7
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.06704711285967e-05, Final residual = 3.07748913544633e-21, No Iterations 14
+RPD
+ExecutionTime = 0.2 s  ClockTime = 9 s
+
+Time = 8
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.94743208016415e-06, Final residual = 9.89809634058175e-21, No Iterations 15
+RPD
+ExecutionTime = 0.2 s  ClockTime = 10 s
+
+Time = 9
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.23672816007149e-06, Final residual = 6.75100741443683e-21, No Iterations 15
+RPD
+ExecutionTime = 0.21 s  ClockTime = 10 s
+
+Time = 10
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.4110997285131e-06, Final residual = 6.08804010503275e-21, No Iterations 15
+RPD
+ExecutionTime = 0.22 s  ClockTime = 10 s
+
+Time = 11
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.64518001750185e-07, Final residual = 3.4902766187706e-21, No Iterations 15
+RPD
+ExecutionTime = 0.23 s  ClockTime = 10 s
+
+Time = 12
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.39552810592675e-07, Final residual = 2.71645755182857e-21, No Iterations 15
+RPD
+ExecutionTime = 0.24 s  ClockTime = 10 s
+
+Time = 13
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.87829827528666e-07, Final residual = 2.07507445237527e-21, No Iterations 15
+RPD
+ExecutionTime = 0.25 s  ClockTime = 10 s
+
+Time = 14
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.11541678048667e-07, Final residual = 7.35619209219744e-21, No Iterations 14
+RPD
+ExecutionTime = 0.26 s  ClockTime = 10 s
+
+Time = 15
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.0283678481257e-08, Final residual = 6.43360196749726e-21, No Iterations 14
+RPD
+ExecutionTime = 0.27 s  ClockTime = 10 s
+
+Time = 16
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.64230039502813e-08, Final residual = 9.99493706954219e-21, No Iterations 14
+RPD
+ExecutionTime = 0.28 s  ClockTime = 10 s
+
+Time = 17
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.17994191148178e-08, Final residual = 7.64596328183993e-21, No Iterations 14
+RPD
+ExecutionTime = 0.29 s  ClockTime = 10 s
+
+Time = 18
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.23990668178626e-08, Final residual = 5.91117617796073e-21, No Iterations 14
+RPD
+ExecutionTime = 0.3 s  ClockTime = 10 s
+
+Time = 19
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.6120671507451e-08, Final residual = 4.65195778774233e-21, No Iterations 14
+RPD
+ExecutionTime = 0.3 s  ClockTime = 10 s
+
+Time = 20
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.17993362662109e-08, Final residual = 3.69934069153847e-21, No Iterations 14
+RPD
+ExecutionTime = 0.31 s  ClockTime = 10 s
+
+Time = 21
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.75371551837198e-09, Final residual = 2.97760744798944e-21, No Iterations 14
+RPD
+ExecutionTime = 0.32 s  ClockTime = 10 s
+
+Time = 22
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.56617807214164e-09, Final residual = 2.30283412574058e-21, No Iterations 14
+RPD
+ExecutionTime = 0.32 s  ClockTime = 10 s
+
+Time = 23
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.97101379302253e-09, Final residual = 8.05672139319896e-21, No Iterations 13
+RPD
+ExecutionTime = 0.33 s  ClockTime = 10 s
+
+Time = 24
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.79330739534235e-09, Final residual = 6.02429818730277e-21, No Iterations 13
+RPD
+ExecutionTime = 0.34 s  ClockTime = 10 s
+
+Time = 25
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.91472794942937e-09, Final residual = 4.72244903915989e-21, No Iterations 13
+RPD
+ExecutionTime = 0.35 s  ClockTime = 10 s
+
+Time = 26
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.25298076994166e-09, Final residual = 7.84754996830298e-21, No Iterations 13
+RPD
+ExecutionTime = 0.35 s  ClockTime = 10 s
+
+Time = 27
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.75061268314351e-09, Final residual = 6.05434842997384e-21, No Iterations 13
+RPD
+ExecutionTime = 0.36 s  ClockTime = 10 s
+
+Time = 28
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.36670417564285e-09, Final residual = 4.72433758569984e-21, No Iterations 13
+RPD
+ExecutionTime = 0.37 s  ClockTime = 10 s
+
+Time = 29
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.07163178933819e-09, Final residual = 3.69655524855833e-21, No Iterations 13
+RPD
+ExecutionTime = 0.37 s  ClockTime = 10 s
+
+Time = 30
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.43548231872087e-10, Final residual = 2.91720340567464e-21, No Iterations 13
+RPD
+ExecutionTime = 0.38 s  ClockTime = 10 s
+
+Time = 31
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.66357686064618e-10, Final residual = 7.98797947920019e-21, No Iterations 12
+RPD
+ExecutionTime = 0.39 s  ClockTime = 10 s
+
+Time = 32
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.28086226710772e-10, Final residual = 6.10675368567655e-21, No Iterations 12
+RPD
+ExecutionTime = 0.4 s  ClockTime = 10 s
+
+Time = 33
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.1974832587592e-10, Final residual = 4.68342803960126e-21, No Iterations 12
+RPD
+ExecutionTime = 0.4 s  ClockTime = 10 s
+
+Time = 34
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.34580504393098e-10, Final residual = 9.5179835081291e-21, No Iterations 12
+RPD
+ExecutionTime = 0.41 s  ClockTime = 10 s
+
+Time = 35
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.67370285804422e-10, Final residual = 7.39929092365929e-21, No Iterations 12
+RPD
+ExecutionTime = 0.42 s  ClockTime = 10 s
+
+Time = 36
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.14169296508214e-10, Final residual = 5.78375587305272e-21, No Iterations 12
+RPD
+ExecutionTime = 0.42 s  ClockTime = 10 s
+
+Time = 37
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.71918872779288e-10, Final residual = 4.50363552457419e-21, No Iterations 12
+RPD
+ExecutionTime = 0.43 s  ClockTime = 10 s
+
+Time = 38
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.38275316899943e-10, Final residual = 3.52678650972497e-21, No Iterations 12
+RPD
+ExecutionTime = 0.44 s  ClockTime = 10 s
+
+Time = 39
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.11417724773643e-10, Final residual = 9.48369948966171e-21, No Iterations 11
+RPD
+ExecutionTime = 0.44 s  ClockTime = 10 s
+
+Time = 40
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.99270380283215e-11, Final residual = 7.4527284354016e-21, No Iterations 11
+RPD
+ExecutionTime = 0.46 s  ClockTime = 10 s
+
+Time = 41
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.26934241815781e-11, Final residual = 5.88821273753798e-21, No Iterations 11
+RPD
+ExecutionTime = 0.46 s  ClockTime = 10 s
+
+Time = 42
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.88457663338741e-11, Final residual = 4.67713869266962e-21, No Iterations 11
+RPD
+ExecutionTime = 0.46 s  ClockTime = 10 s
+
+Time = 43
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.77006598945015e-11, Final residual = 3.72479761321882e-21, No Iterations 11
+RPD
+ExecutionTime = 0.47 s  ClockTime = 10 s
+
+Time = 44
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.87163615381586e-11, Final residual = 2.9741982653956e-21, No Iterations 11
+RPD
+ExecutionTime = 0.48 s  ClockTime = 10 s
+
+Time = 45
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.14588209530538e-11, Final residual = 8.13025499545148e-21, No Iterations 11
+RPD
+ExecutionTime = 0.49 s  ClockTime = 10 s
+
+Time = 46
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.55870743838544e-11, Final residual = 6.60672283933732e-21, No Iterations 11
+RPD
+ExecutionTime = 0.49 s  ClockTime = 10 s
+
+Time = 47
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.08304150777473e-11, Final residual = 5.38098662722838e-21, No Iterations 11
+RPD
+ExecutionTime = 0.5 s  ClockTime = 10 s
+
+Time = 48
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.69722732365728e-11, Final residual = 4.39214478349135e-21, No Iterations 11
+RPD
+ExecutionTime = 0.51 s  ClockTime = 10 s
+
+Time = 49
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.38393694491783e-11, Final residual = 3.5915619632831e-21, No Iterations 11
+RPD
+ExecutionTime = 0.51 s  ClockTime = 10 s
+
+Time = 50
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.12926991258388e-11, Final residual = 9.93486468854873e-21, No Iterations 10
+RPD
+ExecutionTime = 0.52 s  ClockTime = 10 s
+
+Time = 51
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 9.22056678511441e-12, Final residual = 8.1760245916717e-21, No Iterations 10
+RPD
+ExecutionTime = 0.53 s  ClockTime = 10 s
+
+Time = 52
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.53305732794233e-12, Final residual = 6.73757130237242e-21, No Iterations 10
+RPD
+ExecutionTime = 0.53 s  ClockTime = 10 s
+
+Time = 53
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.15765481444921e-12, Final residual = 5.55782742652813e-21, No Iterations 10
+RPD
+ExecutionTime = 0.54 s  ClockTime = 10 s
+
+Time = 54
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.03581152099132e-12, Final residual = 4.58830741345618e-21, No Iterations 10
+RPD
+ExecutionTime = 0.55 s  ClockTime = 10 s
+
+Time = 55
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.12015512738555e-12, Final residual = 9.53481147207019e-21, No Iterations 10
+RPD
+ExecutionTime = 0.56 s  ClockTime = 10 s
+
+Time = 56
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.37233033903285e-12, Final residual = 7.83259866898217e-21, No Iterations 10
+RPD
+ExecutionTime = 0.56 s  ClockTime = 10 s
+
+Time = 57
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.76122991436438e-12, Final residual = 6.43959314041677e-21, No Iterations 10
+RPD
+ExecutionTime = 0.57 s  ClockTime = 10 s
+
+Time = 58
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.26160008224484e-12, Final residual = 5.29723559004287e-21, No Iterations 10
+RPD
+ExecutionTime = 0.57 s  ClockTime = 10 s
+
+Time = 59
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.85291803870814e-12, Final residual = 4.35939724021533e-21, No Iterations 10
+RPD
+ExecutionTime = 0.58 s  ClockTime = 10 s
+
+Time = 60
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.51848578736096e-12, Final residual = 3.58858278841786e-21, No Iterations 10
+RPD
+ExecutionTime = 0.59 s  ClockTime = 10 s
+
+Time = 61
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.24471182556901e-12, Final residual = 2.95457382123224e-21, No Iterations 10
+RPD
+ExecutionTime = 0.59 s  ClockTime = 10 s
+
+Time = 62
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.02051158714602e-12, Final residual = 9.16589810966084e-21, No Iterations 9
+RPD
+ExecutionTime = 0.6 s  ClockTime = 10 s
+
+Time = 63
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.36851420353209e-13, Final residual = 7.55833792033887e-21, No Iterations 9
+RPD
+ExecutionTime = 0.61 s  ClockTime = 10 s
+
+Time = 64
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.86363117262348e-13, Final residual = 6.23277414488769e-21, No Iterations 9
+RPD
+ExecutionTime = 0.61 s  ClockTime = 10 s
+
+Time = 65
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.6301833346461e-13, Final residual = 5.13847773019084e-21, No Iterations 9
+RPD
+ExecutionTime = 0.62 s  ClockTime = 10 s
+
+Time = 66
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.61903614338591e-13, Final residual = 4.23606956731394e-21, No Iterations 9
+RPD
+ExecutionTime = 0.63 s  ClockTime = 10 s
+
+Time = 67
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.7899315714849e-13, Final residual = 3.49155707805997e-21, No Iterations 9
+RPD
+ExecutionTime = 0.64 s  ClockTime = 10 s
+
+Time = 68
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.10997474252219e-13, Final residual = 9.8989541804646e-21, No Iterations 9
+RPD
+ExecutionTime = 0.65 s  ClockTime = 10 s
+
+Time = 69
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.55223345376009e-13, Final residual = 8.12188167537505e-21, No Iterations 9
+RPD
+ExecutionTime = 0.66 s  ClockTime = 10 s
+
+Time = 70
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.09467509564518e-13, Final residual = 6.66525131272171e-21, No Iterations 9
+RPD
+ExecutionTime = 0.66 s  ClockTime = 10 s
+
+Time = 71
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.71927488498088e-13, Final residual = 5.47094479746638e-21, No Iterations 9
+RPD
+ExecutionTime = 0.67 s  ClockTime = 10 s
+
+Time = 72
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.4112364175973e-13, Final residual = 4.49144301104403e-21, No Iterations 9
+RPD
+ExecutionTime = 0.67 s  ClockTime = 10 s
+
+Time = 73
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.15845676556853e-13, Final residual = 3.6893266099512e-21, No Iterations 9
+RPD
+ExecutionTime = 0.68 s  ClockTime = 10 s
+
+Time = 74
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 9.50980968762089e-14, Final residual = 3.02922693483519e-21, No Iterations 9
+RPD
+ExecutionTime = 0.69 s  ClockTime = 10 s
+
+Time = 75
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.80698820365987e-14, Final residual = 8.86765657959672e-21, No Iterations 8
+RPD
+ExecutionTime = 0.69 s  ClockTime = 10 s
+
+Time = 76
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.40929762032159e-14, Final residual = 7.29426120714126e-21, No Iterations 8
+RPD
+ExecutionTime = 0.7 s  ClockTime = 10 s
+
+Time = 77
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.26184838271747e-14, Final residual = 5.99464460024585e-21, No Iterations 8
+RPD
+ExecutionTime = 0.7 s  ClockTime = 10 s
+
+Time = 78
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.31991643610102e-14, Final residual = 4.92731054741869e-21, No Iterations 8
+RPD
+ExecutionTime = 0.71 s  ClockTime = 10 s
+
+Time = 79
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.54658965440681e-14, Final residual = 4.04699265973554e-21, No Iterations 8
+RPD
+ExecutionTime = 0.72 s  ClockTime = 10 s
+
+Time = 80
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.91176785326936e-14, Final residual = 8.5746598691679e-21, No Iterations 8
+RPD
+ExecutionTime = 0.72 s  ClockTime = 10 s
+
+Time = 81
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.39069462545487e-14, Final residual = 7.06516658022387e-21, No Iterations 8
+RPD
+ExecutionTime = 0.73 s  ClockTime = 10 s
+
+Time = 82
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.96282474591503e-14, Final residual = 5.81356375464904e-21, No Iterations 8
+RPD
+ExecutionTime = 0.73 s  ClockTime = 10 s
+
+Time = 83
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.61146669903992e-14, Final residual = 4.77180093105682e-21, No Iterations 8
+RPD
+ExecutionTime = 0.74 s  ClockTime = 10 s
+
+Time = 84
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.32308296872465e-14, Final residual = 3.93248110980381e-21, No Iterations 8
+RPD
+ExecutionTime = 0.75 s  ClockTime = 10 s
+
+Time = 85
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.08628269837559e-14, Final residual = 3.2368752621916e-21, No Iterations 8
+RPD
+ExecutionTime = 0.75 s  ClockTime = 10 s
+
+Time = 86
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.91856672262765e-15, Final residual = 9.14893880606923e-21, No Iterations 7
+RPD
+ExecutionTime = 0.76 s  ClockTime = 10 s
+
+Time = 87
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.32205547366219e-15, Final residual = 7.52040908260933e-21, No Iterations 7
+RPD
+ExecutionTime = 0.77 s  ClockTime = 10 s
+
+Time = 88
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.01175203569115e-15, Final residual = 6.2068257967458e-21, No Iterations 7
+RPD
+ExecutionTime = 0.77 s  ClockTime = 10 s
+
+Time = 89
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.93528294688508e-15, Final residual = 5.08998067511104e-21, No Iterations 7
+RPD
+ExecutionTime = 0.78 s  ClockTime = 10 s
+
+Time = 90
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.05206671048989e-15, Final residual = 4.20621266734453e-21, No Iterations 7
+RPD
+ExecutionTime = 0.79 s  ClockTime = 10 s
+
+Time = 91
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.32672469640376e-15, Final residual = 9.98658866673631e-21, No Iterations 7
+RPD
+ExecutionTime = 0.79 s  ClockTime = 10 s
+
+Time = 92
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.73137231419883e-15, Final residual = 8.22865272835324e-21, No Iterations 7
+RPD
+ExecutionTime = 0.8 s  ClockTime = 10 s
+
+Time = 93
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.24278605777377e-15, Final residual = 6.70205605913925e-21, No Iterations 7
+RPD
+ExecutionTime = 0.81 s  ClockTime = 10 s
+
+Time = 94
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.84121625011995e-15, Final residual = 5.57578314735266e-21, No Iterations 7
+RPD
+ExecutionTime = 0.81 s  ClockTime = 10 s
+
+Time = 95
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.51161660391608e-15, Final residual = 4.59327536166968e-21, No Iterations 7
+RPD
+ExecutionTime = 0.82 s  ClockTime = 10 s
+
+Time = 96
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.24115940677666e-15, Final residual = 3.74596913372789e-21, No Iterations 7
+RPD
+ExecutionTime = 0.83 s  ClockTime = 10 s
+
+Time = 97
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.01904082291701e-15, Final residual = 3.09792398196463e-21, No Iterations 7
+RPD
+ExecutionTime = 0.84 s  ClockTime = 10 s
+
+Time = 98
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.36798803384321e-16, Final residual = 8.87984438561803e-21, No Iterations 6
+RPD
+ExecutionTime = 0.84 s  ClockTime = 10 s
+
+Time = 99
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.86999658989615e-16, Final residual = 7.34823091159498e-21, No Iterations 6
+RPD
+ExecutionTime = 0.85 s  ClockTime = 10 s
+
+Time = 100
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.64364732787124e-16, Final residual = 5.94401220371099e-21, No Iterations 6
+RPD
+ExecutionTime = 0.86 s  ClockTime = 10 s
+
+Time = 101
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.63328613458847e-16, Final residual = 4.90325393381168e-21, No Iterations 6
+RPD
+ExecutionTime = 0.87 s  ClockTime = 10 s
+
+Time = 102
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.80574688957615e-16, Final residual = 8.38103241218926e-21, No Iterations 6
+RPD
+ExecutionTime = 0.87 s  ClockTime = 10 s
+
+Time = 103
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.12621272764909e-16, Final residual = 6.93965995004141e-21, No Iterations 6
+RPD
+ExecutionTime = 0.88 s  ClockTime = 10 s
+
+Time = 104
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.56959166263775e-16, Final residual = 5.31549381709791e-21, No Iterations 6
+RPD
+ExecutionTime = 0.89 s  ClockTime = 10 s
+
+Time = 105
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.11099067352907e-16, Final residual = 4.40836075369242e-21, No Iterations 6
+RPD
+ExecutionTime = 0.9 s  ClockTime = 10 s
+
+Time = 106
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.73585549946442e-16, Final residual = 3.43288150371941e-21, No Iterations 6
+RPD
+ExecutionTime = 0.9 s  ClockTime = 10 s
+
+Time = 107
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.42640813496463e-16, Final residual = 2.87413552676859e-21, No Iterations 6
+RPD
+ExecutionTime = 0.91 s  ClockTime = 10 s
+
+Time = 108
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.17337103840705e-16, Final residual = 8.13711721511727e-21, No Iterations 5
+RPD
+ExecutionTime = 0.92 s  ClockTime = 10 s
+
+Time = 109
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 9.67940000104539e-17, Final residual = 6.77005947546895e-21, No Iterations 5
+RPD
+ExecutionTime = 0.92 s  ClockTime = 10 s
+
+Time = 110
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.9719278658657e-17, Final residual = 5.6080091895675e-21, No Iterations 5
+RPD
+ExecutionTime = 0.93 s  ClockTime = 10 s
+
+Time = 111
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.55356146027697e-17, Final residual = 9.32556712786668e-21, No Iterations 5
+RPD
+ExecutionTime = 0.94 s  ClockTime = 10 s
+
+Time = 112
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.41005130092749e-17, Final residual = 7.78927105548346e-21, No Iterations 5
+RPD
+ExecutionTime = 0.94 s  ClockTime = 10 s
+
+Time = 113
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.46112893526874e-17, Final residual = 6.29015214507201e-21, No Iterations 5
+RPD
+ExecutionTime = 0.95 s  ClockTime = 10 s
+
+Time = 114
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.68948427526606e-17, Final residual = 5.09174516613441e-21, No Iterations 5
+RPD
+ExecutionTime = 0.96 s  ClockTime = 10 s
+
+Time = 115
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 3.08239708250117e-17, Final residual = 3.73585300230224e-21, No Iterations 5
+RPD
+ExecutionTime = 0.97 s  ClockTime = 10 s
+
+Time = 116
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.54247824517601e-17, Final residual = 9.16125136567836e-21, No Iterations 4
+RPD
+ExecutionTime = 0.98 s  ClockTime = 10 s
+
+Time = 117
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 2.12327811290938e-17, Final residual = 7.41970858841966e-21, No Iterations 4
+RPD
+ExecutionTime = 0.99 s  ClockTime = 10 s
+
+Time = 118
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.75409596085825e-17, Final residual = 6.40743472352562e-21, No Iterations 4
+RPD
+ExecutionTime = 1 s  ClockTime = 10 s
+
+Time = 119
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.48580676814066e-17, Final residual = 4.76532003289231e-21, No Iterations 4
+RPD
+ExecutionTime = 1 s  ClockTime = 10 s
+
+Time = 120
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.24292779350909e-17, Final residual = 3.8121674160432e-21, No Iterations 4
+RPD
+ExecutionTime = 1.01 s  ClockTime = 10 s
+
+Time = 121
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 1.05889851867254e-17, Final residual = 8.85132835301903e-21, No Iterations 4
+RPD
+ExecutionTime = 1.02 s  ClockTime = 10 s
+
+Time = 122
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 8.79001710282707e-18, Final residual = 7.41956286230953e-21, No Iterations 4
+RPD
+ExecutionTime = 1.02 s  ClockTime = 10 s
+
+Time = 123
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 7.74842406060455e-18, Final residual = 5.59325192676747e-21, No Iterations 4
+RPD
+ExecutionTime = 1.03 s  ClockTime = 10 s
+
+Time = 124
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 6.41119630999194e-18, Final residual = 4.57053474283849e-21, No Iterations 4
+RPD
+ExecutionTime = 1.04 s  ClockTime = 10 s
+
+Time = 125
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 5.77504117665112e-18, Final residual = 5.01239938049294e-21, No Iterations 4
+RPD
+ExecutionTime = 1.04 s  ClockTime = 10 s
+
+Time = 126
+
+In: frozenkOmegaSST.correct()
+Corrections: xi = 1, kDeficit factor = 1, bijDelta factor = 1
+DILUPBiCGStab:  Solving for omega, Initial residual = 4.91639810544069e-18, Final residual = 9.98968479717789e-21, No Iterations 3
+RPD
+ExecutionTime = 1.05 s  ClockTime = 10 s
+
+
+SIMPLE solution converged in 126 iterations
+
+Computing p
+GAMG:  Solving for p, Initial residual = 0.999999999999446, Final residual = 9.62338459297206e-09, No Iterations 184
+time step continuity errors : sum local = 2.12061642096841e-07, global = -1.53141272496576e-13, cumulative = -1.53141272496576e-13
+End
+

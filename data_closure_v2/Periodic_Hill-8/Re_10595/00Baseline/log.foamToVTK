@@ -1,0 +1,37 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : foamToVTK -ascii -faceSet wallFaceSet -time 0
+Date   : Apr 29 2026
+Time   : 15:01:19
+Host   : "Renzhi-Desktop"
+PID    : 1865881
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/Closure_Challenge/Periodic_Hill-8/Re_10595/00Baseline
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function void* Foam::dlOpen(const Foam::fileName&, bool)
+    in file POSIX.C at line 1251
+    dlopen error : /home/renzhi/OpenFOAM/renzhi-8/platforms/linux64GccDPInt32Opt/lib/libfrozenIncompressibleTurbulenceModels.so: undefined symbol: _ZTIN4Foam36incompressibleMomentumTransportModelE
+--> FOAM Warning : 
+    From function bool Foam::dlLibraryTable::open(const Foam::fileName&, bool)
+    in file db/dynamicLibrary/dlLibraryTable/dlLibraryTable.C at line 106
+    could not load "libfrozenIncompressibleTurbulenceModels.so"
+Create mesh for time = 0
+
+Time: 0
+    FaceSet   : "/home/renzhi/inversion_LOCAL/Closure_Challenge/Periodic_Hill-8/Re_10595/00Baseline/VTK/wallFaceSet/wallFaceSet_0.vtk"
+End
+

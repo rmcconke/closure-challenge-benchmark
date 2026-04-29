@@ -1,0 +1,58 @@
+{
+  "case": "ERCOFTAC Ahmed Body 25 deg (case082)",
+  "reference_conditions": {
+    "U_ref_m_s": 40.0,
+    "h_body_m": 0.288,
+    "L_body_m": 1.044,
+    "w_body_m": 0.389,
+    "A_frontal_m2": 0.11203199999999999,
+    "Re_h": 768000,
+    "rho_kg_m3": 1.0
+  },
+  "baseline_komegasst": {
+    "solver": "simpleFoam",
+    "turbulence_model": "kOmegaSST",
+    "converged_at_t": 30,
+    "body_wetted_area_m2": 1.3261697245919353,
+    "body_n_surface_cells": 159661,
+    "CD_pressure": 0.36234527105814396,
+    "CL_pressure": 0.022304649074049127,
+    "CD_friction": 0.03538830672108941,
+    "CL_friction": 0.0001422114315158062,
+    "CD_total": 0.39773357777923335,
+    "CL_total": 0.022446860505564933,
+    "CD_friction_share_pct": 8.897490354895835,
+    "Cp_min": -0.8064354372024536,
+    "Cp_max": -0.1209447145462036,
+    "Cp_mean_slant_centerline": -0.3840457518895467,
+    "Cp_mean_base_centerline": -0.17530886554718011
+  },
+  "experiment_LSTM_Erlangen": {
+    "source": "Lienhart, Stoots, Becker 2000/2003; ERCOFTAC case082 tarball",
+    "measurement": "LDA mean velocity + Reynolds stresses; surface static taps for Cp",
+    "CD_total": 0.285,
+    "CD_total_uncertainty": 0.005,
+    "Cp_min": -1.566,
+    "Cp_max": -0.135,
+    "Cp_n_taps_total": 433,
+    "Cp_n_centerline_y0_taps": 32,
+    "LDA_z_min_above_wall_mm": 15
+  },
+  "extraction_notes": {
+    "Cp_baseline_from": "VTK/body/body_3000.vtk surface patch (closest-cell)",
+    "p_reference": "mean inlet kinematic pressure (m^2/s^2)",
+    "wake_baseline_near_wall": "augmented from VTK volume probe at z=1..24 mm (10 stations)",
+    "slant_baseline_near_wall": "augmented from VTK volume probe at z_wall+(1..16) mm (12 stations)"
+  },
+  "metric_files": {
+    "symmetry_plane_y0_dense": "baseline_komegasst/ahmed-25-y000-whole.csv",
+    "slant_xz_y0": "baseline_komegasst/ahmed-25-yp000-xz.csv",
+    "wake_yz_planes": [
+      "baseline_komegasst/ahmed-25-xp000-yz.csv",
+      "baseline_komegasst/ahmed-25-xp080-yz.csv",
+      "baseline_komegasst/ahmed-25-xp200-yz.csv",
+      "baseline_komegasst/ahmed-25-xp500-yz.csv"
+    ],
+    "rear_pressure_taps": "baseline_komegasst/ahmed-25-press.csv"
+  }
+}

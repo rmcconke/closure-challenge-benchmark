@@ -1,0 +1,118 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+//Include case variables (e.g. h).
+#include "../caseDef"
+
+//Include mesh variables (e.g. beta).
+#include "../meshDef"
+
+//Calculate the dimensional first cell height.
+//The factor two is there since OpenFOAM calculates yPlus at the cell center.
+delta_1     #calc "$yPlus * $h / $Re_tau * 2."; 
+
+//Calculate the number of cells in y- and z-direction
+N_y         #calc "ceil(log($h*($beta-1)/$delta_1+1)/log($beta))"; 
+N_z         #calc "ceil($N_y*$AR)";
+
+//Calculate the ratio between the first and last cell
+ratio       #calc "1/pow($beta, $N_y-1)";
+
+//Scale the mesh by the domain height
+scale       $h;
+
+//Nondimensional coordinates of the mesh vertices
+vertices
+(
+    (0 0 0) //0
+    (1 0 0) //1
+    (1 1 0) //2
+    (0 1 0) //3
+    (0 0 $AR) //4
+    (1 0 $AR) //5
+    (1 1 $AR) //6
+    (0 1 $AR) //7
+);
+
+//Create the single block in the mesh, with the calculated number of cells and ratio between first and last cell
+blocks
+(
+    hex (0 1 2 3 4 5 6 7)
+    (1 $N_y $N_z)
+    simpleGrading (1 $ratio $ratio)
+);
+
+
+//Specify the boundary type for each of the six mesh faces
+boundary
+(
+    inflow
+    {
+        type                cyclic;
+        neighbourPatch      outflow;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+
+    outflow
+    {
+        type                cyclic;
+        neighbourPatch      inflow;
+        faces
+        (
+            (1 2 6 5)
+        );
+    }
+
+    wallTop
+    {
+        type wall;
+        faces
+        (
+            (3 7 6 2)
+        );
+    }
+
+    wallSide
+    {
+        type wall;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }    
+    
+    symmetryBottom
+    {
+        type symmetry;
+        faces
+        (
+            (0 1 5 4)
+        );
+    }
+    
+    symmetrySide
+    {
+        type symmetry;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+);
+

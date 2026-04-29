@@ -1,0 +1,42 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : postProcess -funcs (writeCellCentres writeCellVolumes)
+Date   : Jun 24 2025
+Time   : 16:56:15
+Host   : "renzhi-Laptop"
+PID    : 78065
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/GEPFOAM/Periodic_Hill-8/Origin/GEP/meshes/beta11
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+--> FOAM Warning : 
+    From function static Foam::instantList Foam::timeSelector::select0(Foam::Time&, const Foam::argList&)
+    in file db/Time/timeSelector.C at line 269
+    No time specified or available, selecting 'constant'
+Create mesh for time = constant
+
+Time = constant
+
+Reading fields:
+
+Executing functionObjects
+    Writing cell-centre field C to constant
+    Writing the x component field of the cell-centres Cx to constant
+    Writing the y component field of the cell-centres Cy to constant
+    Writing the z component field of the cell-centres Cz to constant
+    Writing cell-volumes field V to constant
+
+End
+

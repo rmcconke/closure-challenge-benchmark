@@ -1,0 +1,110 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : blockMesh
+Date   : Apr 23 2026
+Time   : 16:09:31
+Host   : "Renzhi-Desktop"
+PID    : 1638547
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "system/blockMeshDict"
+Using #calcEntry at line 25 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/system/blockMeshDict"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d6509607897b2521cac059334d720414934dc4f2.so"
+Creating new library in "dynamicCode/_d6509607897b2521cac059334d720414934dc4f2/platforms/linux64GccDPInt32Opt/lib/libcodeStream_d6509607897b2521cac059334d720414934dc4f2.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_d6509607897b2521cac059334d720414934dc4f2"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_d6509607897b2521cac059334d720414934dc4f2
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_d6509607897b2521cac059334d720414934dc4f2/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_d6509607897b2521cac059334d720414934dc4f2.so
+Using #calcEntry at line 28 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/system/blockMeshDict"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_93731ea73ce1e52bf577fc827a3e1bb91e9b0117.so"
+Creating new library in "dynamicCode/_93731ea73ce1e52bf577fc827a3e1bb91e9b0117/platforms/linux64GccDPInt32Opt/lib/libcodeStream_93731ea73ce1e52bf577fc827a3e1bb91e9b0117.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_93731ea73ce1e52bf577fc827a3e1bb91e9b0117"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_93731ea73ce1e52bf577fc827a3e1bb91e9b0117
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_93731ea73ce1e52bf577fc827a3e1bb91e9b0117/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_93731ea73ce1e52bf577fc827a3e1bb91e9b0117.so
+Using #calcEntry at line 29 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/system/blockMeshDict"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5.so"
+Creating new library in "dynamicCode/_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5/platforms/linux64GccDPInt32Opt/lib/libcodeStream_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_91f8671e64ad861adb12ecfdfdb4b4d3d0a738a5.so
+Using #calcEntry at line 32 in file "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/system/blockMeshDict"
+Using #codeStream with "/home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/platforms/linux64GccDPInt32Opt/lib/libcodeStream_88589ee483c52894ac6316677324fe1f122ee61a.so"
+Creating new library in "dynamicCode/_88589ee483c52894ac6316677324fe1f122ee61a/platforms/linux64GccDPInt32Opt/lib/libcodeStream_88589ee483c52894ac6316677324fe1f122ee61a.so"
+Invoking "wmake -s libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_88589ee483c52894ac6316677324fe1f122ee61a"
+wmake libso /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_88589ee483c52894ac6316677324fe1f122ee61a
+    wmkdep: codeStreamTemplate.C
+    Ctoo: codeStreamTemplate.C
+    ld: /home/renzhi/inversion_LOCAL/Closure_Challenge/SquareDuct-8/AR_1_Ret_180/meshes/beta11/dynamicCode/_88589ee483c52894ac6316677324fe1f122ee61a/../platforms/linux64GccDPInt32Opt/lib/libcodeStream_88589ee483c52894ac6316677324fe1f122ee61a.so
+No non-linear block edges defined
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 0.001
+    Block 0 cell size :
+        i : 0.001
+        j : 9.195165642e-05 .. 1.146822064e-06
+        k : 9.195165642e-05 .. 1.146822064e-06
+
+There are no merge patch pairs edges
+
+Detected cyclic patches; ordering boundary faces
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (0.001 0.001 0.001)
+  nPoints: 4608
+  nCells: 2209
+  nFaces: 8930
+  nInternalFaces: 4324
+----------------
+Patches
+----------------
+  patch 0 (start: 4324 size: 2209) name: inflow
+  patch 1 (start: 6533 size: 2209) name: outflow
+  patch 2 (start: 8742 size: 47) name: wallTop
+  patch 3 (start: 8789 size: 47) name: wallSide
+  patch 4 (start: 8836 size: 47) name: symmetryBottom
+  patch 5 (start: 8883 size: 47) name: symmetrySide
+
+End
+

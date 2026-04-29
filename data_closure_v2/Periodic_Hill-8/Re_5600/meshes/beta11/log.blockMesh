@@ -1,0 +1,84 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8-1c9b5879390b
+Exec   : blockMesh
+Date   : Jun 24 2025
+Time   : 16:56:15
+Host   : "renzhi-Laptop"
+PID    : 78064
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/GEPFOAM/Periodic_Hill-8/Origin/GEP/meshes/beta11
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from
+    "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 1
+		Number of boundary faces : 10
+		Number of defined boundary faces : 10
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0800760889 .. 0.0800760889 0.08005623566 .. 0.08005623566 0.0800760889 .. 0.0800760889 0.08005623566 .. 0.08005623566 
+        j : 0.003911129678 .. 0.03911129678 0.003911180066 .. 0.03911180066 0.003911129678 .. 0.03911129678 0.003911180066 .. 0.03911180066 
+        k : 0.2
+    Block 1 cell size :
+        i : 0.075 .. 0.075
+        j : 0.04048019217 .. 0.004048019217
+        k : 0.2
+
+Detected cyclic patches; ordering boundary faces
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 -7.270526847e-09 -0.1) (9 3.035 0.1)
+  nPoints: 31702
+  nCells: 15600
+  nFaces: 62650
+  nInternalFaces: 30950
+----------------
+Patches
+----------------
+  patch 0 (start: 30950 size: 120) name: bottomWall
+  patch 1 (start: 31070 size: 120) name: topWall
+  patch 2 (start: 31190 size: 65) name: inlet_half0
+  patch 3 (start: 31255 size: 65) name: inlet_half1
+  patch 4 (start: 31320 size: 65) name: outlet_half0
+  patch 5 (start: 31385 size: 65) name: outlet_half1
+  patch 6 (start: 31450 size: 7800) name: sideRight_half0
+  patch 7 (start: 39250 size: 7800) name: sideRight_half1
+  patch 8 (start: 47050 size: 7800) name: sideLeft_half0
+  patch 9 (start: 54850 size: 7800) name: sideLeft_half1
+
+End
+

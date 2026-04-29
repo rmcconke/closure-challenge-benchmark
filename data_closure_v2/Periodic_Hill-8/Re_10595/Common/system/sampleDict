@@ -1,0 +1,67 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  1.6                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version         2.0;
+    format          ascii;
+    class           dictionary;
+    location        system;
+    object          sampleDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+setFormat raw;
+
+surfaceFormat raw;
+
+interpolationScheme cell;//cellPatchConstrained;
+
+
+fields
+(
+    U
+    //epsilon
+    //k
+    wallShearStress
+    //yPlus
+    //p
+    //wallGradU
+    //tensorLimitStates
+    //RAnisoEigenValues
+);
+
+sets
+(
+
+  profile_crest
+  {
+      type        midPoint;
+      axis        z;
+
+      start       (0.0  0.0  1.0);
+      end         (0.0  0.0  3.035);
+  }
+);
+
+/*
+surfaces
+(
+  walls_constant
+  {
+      type            patch;
+      patches         ( ".*wall.*" );
+      interpolate     false;
+      // Optional: whether to leave as faces (=default) or triangulate
+      // triangulate     false;
+  }
+);
+*/
+
+// *********************************************************************** //

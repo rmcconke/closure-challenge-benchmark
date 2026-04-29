@@ -1,0 +1,10 @@
+gradk
+{     
+// Mandatory entries     
+type            grad;     
+libs            ("libfieldFunctionObjects.so");     
+field           k;     
+
+// Optional (inherited) entries     
+result          gradk;     
+}

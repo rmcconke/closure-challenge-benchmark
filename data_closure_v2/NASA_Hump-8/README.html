@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="nasa-hump-metrics">NASA Hump Metrics</h1>
+<p>This case generates the required NASA hump challenge metrics:</p>
+<ul>
+<li>Velocity profiles</li>
+<li>Reynolds shear stress profiles</li>
+<li>Wall pressure coefficient, <code>Cp</code></li>
+<li>Wall skin-friction coefficient, <code>Cf</code></li>
+</ul>
+<p>The case setup here was prepared and run with OpenFOAM 8.</p>
+<p>The submitted comparison is between:</p>
+<ul>
+<li><code>00Baseline</code>: RANS(SST) OpenFOAM result</li>
+<li><code>RefData</code>: LES reference data</li>
+</ul>
+<p><code>01Frozen</code> is a separate frozen/interpolated-LES setup and is not included in
+the exported comparison metrics unless <code>comparison_NASA.py</code> is edited to add it.</p>
+<h2 id="directory-layout">Directory Layout</h2>
+<pre class="hljs"><code><div>NASA_Hump-8/
+├── 00Baseline/          # OpenFOAM SST baseline case
+├── 01Frozen/            # Frozen-field case using LES fields on the SST mesh
+├── RefData/             # NASA/LES reference data
+├── Figures/             # Generated plots and metric CSV files
+├── comparison_NASA.py   # Main script for required metric plots and exports
+├── readDefFile.py
+└── readExpData.py
+</div></code></pre>
+<h2 id="note-on-01frozen">Note On <code>01Frozen</code></h2>
+<p><code>01Frozen</code> is not part of the current required SST-vs-LES metric export. It is
+a separate frozen-field case designed for interpolated LES fields on the
+<code>00Baseline</code> SST mesh.</p>
+<p>Running <code>01Frozen/run.sh</code> requires the custom OpenFOAM 8 solver:</p>
+<pre class="hljs"><code><div>frozenSimpleFoam
+</div></code></pre>
+<p>If that solver is not available, the case may not run, but the interpolated LES
+fields are still available in:</p>
+<pre class="hljs"><code><div>01Frozen/0/
+</div></code></pre>
+<p>Important files there include:</p>
+<pre class="hljs"><code><div>U_LES
+k_LES
+tauij_LES
+frozenFields
+inletOutletFields
+</div></code></pre>
+<h2 id="generate-the-sst-baseline-data">Generate The SST Baseline Data</h2>
+<p>Run the baseline OpenFOAM case first:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> NASA_Hump-8/00Baseline
+./run.sh
+</div></code></pre>
+<p>This runs <code>simpleFoam</code>, creates the <code>baselineSolution</code> symlink to the latest
+time directory, and then runs the case post-processing script.</p>
+<p>The post-processing step writes the wall and profile data used by
+<code>comparison_NASA.py</code>, including:</p>
+<ul>
+<li><code>postProcessing/wallValues/</code></li>
+<li><code>postProcessing/singleGraph_x0.65c/</code></li>
+<li><code>postProcessing/singleGraph_x0.8c/</code></li>
+<li><code>postProcessing/singleGraph_x0.9c/</code></li>
+<li><code>postProcessing/singleGraph_x1.0c/</code></li>
+<li><code>postProcessing/singleGraph_x1.1c/</code></li>
+<li><code>postProcessing/singleGraph_x1.2c/</code></li>
+<li><code>postProcessing/singleGraph_x1.3c/</code></li>
+</ul>
+<h2 id="generate-required-plots-and-csv-files">Generate Required Plots And CSV Files</h2>
+<p>From the case root, run:</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> NASA_Hump-8
+python3 comparison_NASA.py
+</div></code></pre>
+<p>Use a Python environment with <code>numpy</code> and <code>matplotlib</code> available. The script
+also uses the local helper modules <code>readDefFile.py</code> and <code>readExpData.py</code>.</p>
+<p>The LES pickle is read from:</p>
+<pre class="hljs"><code><div>RefData/pickledLESData.pickle
+</div></code></pre>
+<p>If the pickle is missing, <code>comparison_NASA.py</code> calls <code>RefData/readAndPickle.py</code>
+to regenerate it from the raw reference data.</p>
+<h2 id="generated-figures">Generated Figures</h2>
+<p>The script writes these PDF plots:</p>
+<pre class="hljs"><code><div>Figures/compareCpWall-NASA.pdf
+Figures/compareCfWall-NASA.pdf
+Figures/compareUxProfiles_NASA.pdf
+Figures/comparekProfiles_NASA.pdf
+Figures/compareupwpProfiles_NASA.pdf
+</div></code></pre>
+<p>The profile plots use <code>x/c</code> and <code>y/c</code>. Curves are shifted in the horizontal
+direction for readability:</p>
+<ul>
+<li>Velocity: <code>0.1 Ux/Uref + x/c</code></li>
+<li>Turbulent kinetic energy: <code>k/Uref^2 + x/c</code></li>
+<li>Reynolds shear stress: <code>2 uv/Uref^2 + x/c</code></li>
+</ul>
+<p>The shift and scaling are only for plotting. The CSV files store the raw
+normalized quantities.</p>
+<h2 id="generated-csv-metrics">Generated CSV Metrics</h2>
+<p>The script writes tab-delimited CSV files:</p>
+<pre class="hljs"><code><div>Figures/wall_Cp_Cf_NASA.csv
+Figures/velocity_shear_profiles_NASA.csv
+</div></code></pre>
+<p><code>wall_Cp_Cf_NASA.csv</code> contains side-by-side SST and LES wall data:</p>
+<pre class="hljs"><code><div>x_over_c
+Cp_RANS_SST
+Cp_LES
+Cf_RANS_SST
+Cf_LES
+</div></code></pre>
+<p><code>velocity_shear_profiles_NASA.csv</code> contains side-by-side SST and LES profile
+data:</p>
+<pre class="hljs"><code><div>station_x_over_c
+wall_normal_over_c
+Ux_over_Uref_RANS_SST
+Ux_over_Uref_LES
+k_over_Uref2_RANS_SST
+k_over_Uref2_LES
+uv_over_Uref2_RANS_SST
+uv_over_Uref2_LES
+</div></code></pre>
+<p>Rows where the LES value is unavailable are dropped, so the exported CSV files
+do not contain <code>nan</code> entries.</p>
+<h2 id="metric-definitions">Metric Definitions</h2>
+<p>The reference velocity is computed from <code>caseDef</code>:</p>
+<pre class="hljs"><code><div>Uref = Mref sqrt(gamma R Tref)
+</div></code></pre>
+<p>The chord length is <code>c = 0.42</code>.</p>
+<h3 id="wall-pressure-coefficient">Wall Pressure Coefficient</h3>
+<p>For SST:</p>
+<pre class="hljs"><code><div>Cp = p / (0.5 Uref^2)
+</div></code></pre>
+<p>For LES:</p>
+<pre class="hljs"><code><div>Cp = (p/pinf - 1) R Tref / (0.5 Uref^2)
+</div></code></pre>
+<h3 id="wall-skin-friction-coefficient">Wall Skin-Friction Coefficient</h3>
+<p>For SST, <code>Cf</code> is computed from the wall-tangential component of the OpenFOAM
+wall shear stress:</p>
+<pre class="hljs"><code><div>tau_t = wallShearStressx t_x + wallShearStressz t_z
+Cf = -tau_t / (0.5 Uref^2)
+</div></code></pre>
+<p>The minus sign matches the wall-point/tangent orientation used by the VTK wall
+face set.</p>
+<p>For LES, <code>Cf</code> is computed from the wall-normal velocity gradient in local wall
+coordinates:</p>
+<pre class="hljs"><code><div>Cf = nu (dU_t/dn) / (0.5 Uref^2)
+</div></code></pre>
+<h3 id="velocity-profiles">Velocity Profiles</h3>
+<p>The velocity profile metric is:</p>
+<pre class="hljs"><code><div>Ux / Uref
+</div></code></pre>
+<p>The CSV stores SST values at the OpenFOAM sampling points. LES values are
+interpolated onto those same wall-normal locations.</p>
+<h3 id="shear-stress-profiles">Shear Stress Profiles</h3>
+<p>The shear stress profile is the Reynolds shear stress component:</p>
+<pre class="hljs"><code><div>uv / Uref^2
+</div></code></pre>
+<p>For LES this comes directly from:</p>
+<pre class="hljs"><code><div>uv/Uinf^2
+</div></code></pre>
+<p>For SST/RANS, the modeled turbulent shear stress is reconstructed from eddy
+viscosity:</p>
+<pre class="hljs"><code><div>uv = -nut (dUx/dz + dUz/dx)
+</div></code></pre>
+<p>If the sampled gradient fields are unavailable, the script falls back to the
+dominant profile gradient:</p>
+<pre class="hljs"><code><div>uv = -nut dUx/dz
+</div></code></pre>
+<h2 id="regeneration-checklist">Regeneration Checklist</h2>
+<ol>
+<li>Source the intended OpenFOAM environment.</li>
+<li>Run <code>00Baseline/run.sh</code>.</li>
+<li>Run <code>python3 comparison_NASA.py</code> from <code>NASA_Hump-8/</code>.</li>
+<li>Use the PDFs in <code>Figures/</code> for visual checks.</li>
+<li>Use the tab-delimited CSV files in <code>Figures/</code> for metric submission.</li>
+</ol>
+
+</body>
+</html>

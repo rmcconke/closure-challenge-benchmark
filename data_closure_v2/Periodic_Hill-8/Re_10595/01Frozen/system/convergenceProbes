@@ -1,0 +1,35 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description : Definition of probe locations for monitoring flow variables.
+\*---------------------------------------------------------------------------*/
+
+
+convergenceProbes
+{
+    // Where to load it from
+    libs            ("libsampling.so");
+
+    type            probes;
+
+    // Name of the directory for probe data
+    name            convergenceProbes;
+
+    // Write at same frequency as fields
+    writeControl    timeStep;
+    writeInterval   1;
+
+    // Fields to be probed
+    fields          (omega kDeficit bijDelta);
+
+    probeLocations
+    (
+        (1e-6 1 0) //High speed region above hill crest
+        (1 0.5 0) //Detachment region
+        (4.65 0.1 0) //Reattachment region
+    );
+}

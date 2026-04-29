@@ -1,0 +1,80 @@
+I/O    : uncollated
+Case   : /home/renzhi/inversion_LOCAL/Closure_Challenge/Periodic_Hill-8/Re_10595/00Baseline
+nProcs : 1
+Create time
+
+Create mesh for time = 10000
+
+
+SIMPLE: Convergence criteria found
+        p: tolerance 1e-15
+
+Time = 10000
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting incompressible transport model Newtonian
+Selecting turbulence model type RAS
+Selecting RAS turbulence model RITAkOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    RASModel        RITAkOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    baseline        true;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.555555555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+    usekDeficit     false;
+    usebijDelta     false;
+    useSigma        false;
+    modelbijDelta   false;
+    modelkDeficit   false;
+    modelSigma      false;
+    bijDeltastabilizer 1;
+    kDeficitstabilizer 1;
+    rampStartTime   0;
+    rampEndTime     100;
+    xi_ramp         1;
+}
+
+No MRF models present
+
+Creating finite volume options from "constant/fvOptions"
+
+Selecting finite volume options model type meanVelocityForce
+    Source: momentumSource
+    - selecting all cells
+    - selected 15600 cell(s) with volume 5.08082422293706
+    Reading pressure gradient from file
+    Initial pressure gradient = 0.00790931734489432
+
+--> FOAM Warning : 
+    From function static bool Foam::functionObjectList::readFunctionObject(const Foam::string&, Foam::dictionary&, const Foam::string&, Foam::HashSet<>&, const Foam::word&)
+    in file db/functionObjects/functionObjectList/functionObjectList.C at line 311
+    Cannot find functionObject file bottomValues
+wallShearStress wallShearStress:
+    processing all wall patches
+
+wallShearStress wallShearStress write:
+    writing object wallShearStress
+    min/max(bottomWall) = (-0.0106975334202822 -0.00470594057393626 -5.36972104985328e-18), (0.00146554383425597 0.000227649756859691 2.72597716965461e-18)
+    min/max(topWall) = (-0.00418120721306899 -1.22811966960512e-06 0), (-0.00288808129307039 6.61547797104176e-07 0)
+
+
+End
+

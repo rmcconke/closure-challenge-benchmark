@@ -1,5 +1,20 @@
 data/Duct-raw
 scripts/plots_data/*
+
+# Heavy simulation data — kept on SURF, never in git
+data_3D/**/VTK/
+data_3D/**/postProcessing/
+data_3D/**/constant/polyMesh/
+data_3D/**/highfidelity/raw_surface/
+data_3D/**/[0-9]*/
+data_closure_v2/**/00Baseline/[0-9]*/
+data_closure_v2/**/01Frozen/[0-9]*/
+
+# AI tool state — never stage
+.claude/
+**/.claude/
+.codex/
+**/.codex/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

@@ -1,0 +1,7 @@
+//Case definition file
+h           0.028; //Hill height
+Lx          0.252; //#calc "9*h; Length on x
+Ly			0.08498; //#calc "3.035*h"; Length on y
+Re_b        10595; //Reynolds number based on bulk velocity
+nu          1.5e-5; //Kinematic viscosity
+

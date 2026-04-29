@@ -1,0 +1,29 @@
+convergenceProbes
+{
+    // Where to load it from
+    libs            ("libsampling.so");
+
+    type            probes;
+
+    // Name of the directory for probe data
+    name            convergenceProbes;
+
+    // Write at same frequency as fields
+    writeControl    timeStep;
+    writeInterval   1;
+
+    // Fields to be probed
+    fields          (p U k omega);
+
+    probeLocations
+    (
+        (0. 0. 0.)		// In the middle of the throat
+        (0. 0. 0.0127)	// At 3/4 height in the throat
+        (0.1016 0. 0.)	// In the middle at 2 radii behind
+        (0.254 0. 0.)	// In the middle at 5 radii behind
+        (0.508 0. 0.)	// In the middle at 10 radii behind
+        (0.762 0. 0.)	// In the middle at 15 radii behind
+        (1.016 0. 0.)	// In the middle at 20 radii behind
+        (1.1176 0. 0.)	// In the middle at 22 radii behind
+    );
+}

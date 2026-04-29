@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     rhoSimpleFoam;
+
+startFrom       latestTime;
+
+startTime       0;
+
+stopAt          endTime;
+
+endTime         10000;
+
+deltaT          1;
+
+writeControl    timeStep;
+
+writeInterval   100;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  8;
+
+writeCompression off;
+
+timeFormat      general;
+
+timePrecision   8;
+
+runTimeModifiable true;
+
+functions
+{
+    #includeFunc    residuals
+
+    #includeFunc    wallShearStress
+    #includeFunc    yPlus
+    #includeFunc    writeCellCentres
+    #includeFunc    probes
+    gradk
+    {
+        // Mandatory entries (unmodifiable)
+        type            grad;
+        libs            ("fieldFunctionObjects");
+
+        // Mandatory (inherited) entries (runtime modifiable)
+        field           k;
+
+        // Optional (inherited) entries
+        result          gradk;
+
+    }
+    gradp
+    {
+        // Mandatory entries (unmodifiable)
+        type            grad;
+        libs            ("fieldFunctionObjects");
+
+        // Mandatory (inherited) entries (runtime modifiable)
+        field           p;
+
+        // Optional (inherited) entries
+        result          gradp;
+        
+    }
+    gradU
+    {
+        // Mandatory entries (unmodifiable)
+        type            grad;
+        libs            ("fieldFunctionObjects");
+
+        // Mandatory (inherited) entries (runtime modifiable)
+        field           U;
+
+        // Optional (inherited) entries
+        result          gradU;
+
+    }
+
+}
+
+
+
+// ************************************************************************* //

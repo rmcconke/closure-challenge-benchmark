@@ -1,0 +1,5 @@
+residualFields  (omega);
+convergenceFields (omega kDeficit bijDelta);
+faceValuesFields $convergenceFields;
+singleGraphFields (omega kDeficit bijDelta U k_LES tauij_LES PkLES nut);
+wallValuesFields (p);

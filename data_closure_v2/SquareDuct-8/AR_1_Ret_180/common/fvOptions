@@ -1,0 +1,34 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvOptions;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include "../caseDef"
+
+
+U_b     #calc "$Re_b * $nu / $h"; //Bulk velocity
+
+meanVelocity1
+{
+    type                meanVelocityForce;
+    selectionMode       all;
+    active              true;
+    fields              (U);
+    Ubar                ($U_b 0 0);
+}
+
+
+
+// ************************************************************************* //
+
