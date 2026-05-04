@@ -6,5 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "closure-challenge>=0.3.1",
+    "matplotlib>=3.10.8",
+    "ofpp>=0.12",
     "tabulate>=0.10.0",
 ]

@@ -5,8 +5,8 @@
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------|-----------|-----------------------|-----------------------|----------------------|----------------------|----------------|----------------|-----------------|--------------|
 |      1 | [Reissmann, Fang, and Sandberg](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/reissmann/score_eval.ipynb) |    0.0595 |                0.0592 |                0.1339 |               0.0606 |               0.076  |         0.0387 |         0.0341 |          0.0325 |       0.0412 |
 |      2 | [Wu and Zhang](https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/wu/description_document.pdf)                 |    0.0624 |                0.0813 |                0.1195 |               0.0569 |               0.0848 |         0.0455 |         0.0399 |          0.035  |       0.0364 |
-|      3 | [Montoya, Oulghelou, and Cinnella](https://doi.org/10.1007/s10494-025-00661-8)                                                            |    0.0779 |                0.068  |                0.1364 |               0.0591 |               0.0882 |         0.0895 |         0.0866 |          0.0487 |       0.0464 |
-
+|      3 | [Liu, Wang, Zhao, and Xiao](https://arxiv.org/abs/2509.17189)                                                                             |    0.0737 |                0.06   |                0.1308 |               0.0613 |               0.0769 |         0.0875 |         0.0805 |          0.0548 |       0.0377 |
+|      4 | [Montoya, Oulghelou, and Cinnella](https://doi.org/10.1007/s10494-025-00661-8)                                                            |    0.0779 |                0.068  |                0.1364 |               0.0591 |               0.0882 |         0.0895 |         0.0866 |          0.0487 |       0.0464 |
 
 Notes:
 - Score is a scaled MAE (lower is better). See the evaluation package [source code](https://github.com/rmcconke/closure-challenge/blob/main/src/closure_challenge/eval.py) for more details.
