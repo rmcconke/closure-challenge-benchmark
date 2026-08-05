@@ -42,6 +42,13 @@ competitors['Liu, Wang, Zhao, and Xiao'] = {
     'link': 'https://arxiv.org/abs/2509.17189'
 }
 
+competitors['Tian, Buchanan, Hickel, Dwight'] = {
+    'total': score_from_csv(os.path.join('submissions', 'tian'), delimiter='\t'),
+    'cases': evaluate_from_csv_by_case(os.path.join('submissions', 'tian'), delimiter='\t'),
+    'link': 'https://github.com/rmcconke/closure-challenge-benchmark/blob/main/submissions/tian/Challenge_submission.pdf'
+}
+
+
 # Sort by total score ascending (lower is better)
 sorted_competitors = sorted(competitors.items(), key=lambda x: x[1]['total'], reverse=False)
 
