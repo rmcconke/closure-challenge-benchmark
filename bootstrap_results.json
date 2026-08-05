@@ -1,0 +1,77 @@
+{
+  "order": [
+    "Reissmann, Fang, and Sandberg",
+    "Wu and Zhang",
+    "Liu, Wang, Zhao, and Xiao",
+    "Montoya, Oulghelou, and Cinnella"
+  ],
+  "smallest_detectable_difference": 0.0009506090248631582,
+  "overall": {
+    "Reissmann, Fang, and Sandberg": {
+      "score": 0.05953352830400628,
+      "ci": [
+        0.058054051621929344,
+        0.06108036993300335
+      ]
+    },
+    "Wu and Zhang": {
+      "score": 0.06242337486208011,
+      "ci": [
+        0.06102294209907537,
+        0.06389329540506196
+      ]
+    },
+    "Liu, Wang, Zhao, and Xiao": {
+      "score": 0.07370800317633697,
+      "ci": [
+        0.07191926997017391,
+        0.07558247943911804
+      ]
+    },
+    "Montoya, Oulghelou, and Cinnella": {
+      "score": 0.07786778801830466,
+      "ci": [
+        0.07602642648069273,
+        0.07980306585685197
+      ]
+    }
+  },
+  "adjacent_pairs": [
+    {
+      "better": "Reissmann, Fang, and Sandberg",
+      "worse": "Wu and Zhang",
+      "gap": 0.0028898465580738317,
+      "ci": [
+        0.002264831294751692,
+        0.0034923090617222778
+      ],
+      "p_better": 1.0
+    },
+    {
+      "better": "Wu and Zhang",
+      "worse": "Liu, Wang, Zhao, and Xiao",
+      "gap": 0.011284628314256855,
+      "ci": [
+        0.010327309746219872,
+        0.012228527795946189
+      ],
+      "p_better": 1.0
+    },
+    {
+      "better": "Liu, Wang, Zhao, and Xiao",
+      "worse": "Montoya, Oulghelou, and Cinnella",
+      "gap": 0.00415978484196769,
+      "ci": [
+        0.003525410555180553,
+        0.004773250198214776
+      ],
+      "p_better": 1.0
+    }
+  ],
+  "settings": {
+    "replicates": 10000,
+    "seed": 0,
+    "alpha": 0.05,
+    "resample_scale": true
+  }
+}

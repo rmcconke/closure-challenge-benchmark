@@ -42,6 +42,7 @@ competitors['Liu, Wang, Zhao, and Xiao'] = {
     'link': 'https://arxiv.org/abs/2509.17189'
 }
 
+
 # Sort by total score ascending (lower is better)
 sorted_competitors = sorted(competitors.items(), key=lambda x: x[1]['total'], reverse=False)
 
